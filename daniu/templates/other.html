@@ -1,0 +1,74 @@
+<!-- 导入模版页 -->
+{% extends 'base.html' %}
+<!-- 导入静态资源 -->
+{% load static %}
+<!-- xxx -->
+{% block content %}
+<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+	<h1 class="page-title">分类： <span>其他整理</span></h1>
+
+	<div id="content" class="site-content" role="main">
+		<article itemscope="" itemtype="http://schema.org/Article" id="post-264"
+				 class="post-264 post type-post status-publish format-standard post-password-required hentry category-other">
+			<header class="entry-header">
+				<h2 class="entry-title" itemprop="name">
+					<a itemprop="url" href="../264.html" title="链向密码保护：全套学习视频,师夷长技以自强的固定链接" rel="bookmark">密码保护：全套学习视频,师夷长技以自强</a>
+				</h2>
+				<div class="entry-meta"><span class="entry-date"><a href="../264.html" rel="bookmark"><time
+						class="entry-date published" datetime="2022-05-02T01:49:40+08:00" itemprop="datepublished">2022年5月2日</time></a></span>
+					by <span class="author vcard" itemscope="" itemprop="author" itemtype="http://schema.org/Person"><a
+							class="url fn n" href="../author/jinghuaxia.html" rel="author" itemprop="url"><span
+							itemprop="name">达牛</span></a></span><span class="sep">&middot;</span><span
+							class="comments-link">要查看留言请输入您的密码。</span></div>
+			</header>
+			<div class="entry-content" itemprop="articleBody">
+				<form action="/postpassword.html" class="post-password-form"
+					  method="post">
+					{% csrf_token %}
+					<p>此内容受密码保护。如需查阅，请在下列字段中输入您的密码。</p>
+					<p><label for="pwbox-264">密码： <input name="post_password" id="pwbox-264" type="password" size="20"></label>
+						<input type="submit" name="Submit" value="提交"></p>
+				</form>
+				{{ password_status }}
+			</div>
+		</article>
+
+		<article itemscope="" itemtype="http://schema.org/Article" id="post-152"
+				 class="post-152 post type-post status-publish format-standard hentry category-other">
+			<header class="entry-header">
+				<h2 class="entry-title" itemprop="name">
+					<a itemprop="url" href="../152.html" title="链向Windows原版系统的安装与区别的固定链接" rel="bookmark">Windows原版系统的安装与区别</a>
+				</h2>
+				<div class="entry-meta"><span class="entry-date"><a href="../152.html" rel="bookmark"><time
+						class="entry-date published" datetime="2022-04-29T01:35:11+08:00" itemprop="datepublished">2022年4月29日</time></a></span>
+					by <span class="author vcard" itemscope="" itemprop="author" itemtype="http://schema.org/Person"><a
+							class="url fn n" href="../author/jinghuaxia.html" rel="author" itemprop="url"><span
+							itemprop="name">达牛</span></a></span><span class="sep">&middot;</span><span
+							class="comments-link"><a href="../152.html#comments"
+													 itemprop="discussionUrl">5条评论</a></span></div>
+			</header>
+			<div class="entry-content" itemprop="articleBody">
+				<p>GHOST系统的是个人把常用的软件、驱动什么的包括操作系统做成压缩镜像，这样安装方便，也安装很快.大量的集成,一键装机,自动装驱动，一键备份.简单快捷电脑城最爱。</p>
+				<p>但是ghost的缺点和危害也很明显，不同的人封装技术不同，可能导致组件的丢失后期安装软件失败或者各种报错。最重要的是有可能带有病毒,大家可以<a
+						href="javascript:window.open('https://www.baidu.com/s?wd=ghost系统危害&amp;rsv_spt=1&amp;rsv_iqid=0x87a836c600051114&amp;issp=1&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;ie=utf-8&amp;rqlang=cn&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;oq=ghost%25E7%25B3%25BB%25E7%25BB%259F%25E5%259D%258F%25E5%25A4%2584&amp;rsv_t=5abedFwJSW8f7ytAMNlcIHGWIWXUcHipJjSZNqjr5ePZKHbD5NVr33lSjfNBLlZZElvs&amp;inputT=1994&amp;rsv_pq=8bbbc12b00043753&amp;rsv_sug3=85&amp;rsv_sug1=66&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;rsv_sug4=2671');"
+						target="_blank" rel="noopener noreferrer">百度ghost的系统危害</a></p>
+				<p>安装原版系统有利于系统更新，稳定性较高，安全可靠。</p>
+				<p><strong>U盘装机方法:</strong>（若需帮助加Q1626958667）<br>
+					1、先下载原版镜像，在左侧菜单中找到自己需要的系统镜像。<br>
+					2 、下载纯洁的U盘pe <a href="javascript:window.open('https://pan.baidu.com/s/1eVHBZB_w4WI0cOAp1CaoZQ');"
+									target="_blank" rel="noopener noreferrer">  U启通下载</a><br>
+					3、使用f2 或者f8或者f12快捷进入U盘系统，不同厂家电脑不一样。<br>
+					4、进入pe之后格式化原来的系统盘。<br>
+					5、重新安装执行镜像，完成之后重启即可。</p>
+				<p>注意:<br>
+					1、制作U盘启动的时候，先把U盘腾空。<br>
+					2、关闭电脑管家和杀毒软件。避免写入错误。</p>
+				<p>&nbsp;</p>
+			</div>
+		</article>
+
+	</div>
+
+
+</div>
+{% endblock %}

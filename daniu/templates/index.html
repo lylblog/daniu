@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% for article in articles %}
+        <!-- <a href="{% url 'daniuapp:info' article.article_id %}" title="" target="_blank">{{ article.title }}</a>  遍历文章ID -->
+        <!-- <a href="{% url 'daniuapp:info' 2 %}" title="" target="_blank">{{ article.title }}</a>  指定文章ID -->
+{% endfor %}
+
+<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+<div itemscope="" itemtype="http://schema.org/Article" id="content" class="site-content" role="main">
+<article id="post-559" class="post-559 page type-page status-publish hentry">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="name">欢迎来到xxx的博客</h1>
+    </header>
+    <div class="entry-content" itemprop="articleBody">
+
+        <p><h3>Hi，</h3></p>
+        <p>本博客为原版系统和安装教程的个人网站；为了解决一些有些网络办公软件文章故意词不达意诱导下载，绑定游戏或者垃圾软件。对日常办公使用频率较高的工具整理，为广大的用户提供纯净、安全的原版系统，拒绝集成捆绑第三方软件，让每个用户都能体验到纯净操作系统，提高系统安全性，使用更安心，希望能帮到访客。</p>
+        <p>点击导航栏图标，可快速直达相应版本的下载页面。</p>
+        <p><strong>关于网盘访客解压问题:</strong><br><strong>&#8212;&#8212;1、解压密码 jingxiansheng(手动输入) </strong></p>
+        <p><strong><span style="color: #800000;">关于安装的一些疑问：</span></strong><br><strong>&#8212;&#8212;1、<span
+                style="color: #333399;">安装与电脑技术问题探讨、解惑    <a href="cnkefu.html" target="_blank"
+                                                             rel="noopener">点击-技术支持</a></span><span
+                style="color: #333399;"><br>&#8212;&#8212;2、关于office激活后查看是否永久的方法 <a href="2228.html" target="_blank"
+                                                                                    rel="noopener noreferrer">点击进入</a><br></span></strong><br><strong>关于安装的一些疑问：</strong><br><strong>&#8212;&#8212;1、镜像文件提示需要刻录怎么办？，<a
+                href="2611.html" target="_blank" rel="noopener">点击查看教程</a></strong><br><strong>&#8212;&#8212;2、安装之前请卸载掉旧版本和WPS以免出错</strong>
+        </p>
+        <p style="text-align: center;">建站费用，服务器6k/年，域名65元/年。</p>
+        <h4 style="text-align: center;">打赏是维护的动力（<a href="{% static 'imgqq/fghj.jpg' %}">点击打赏</a>）</h4>
+        <figure class="wp-block-image"><img width="640" height="251" src="{% static 'wp-content/uploads/2020/02/timg.jpg' %}" alt=""
+                                            class="wp-image-1625"
+                                            srcset="{% static 'wp-content/uploads/2020/02/timg.jpg' %} 640w, {% static 'wp-content/uploads/2020/02/timg.jpg' %} 300w"
+                                            sizes="(max-width: 640px) 100vw, 640px"></figure>
+    </div>
+</article>
+</div>
+</div>
+
+{% endblock %}

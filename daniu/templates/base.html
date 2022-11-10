@@ -1,0 +1,516 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
+    <title>欢迎来到xx的博客</title>
+    <link rel="canonical" href="">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css' href="{% static 'wp-includes/css/dist/block-library/style.min.css' %}" media='all'>
+    <style id='global-styles-inline-css' type='text/css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('https://www.dnbbn.com/');
+            --wp--preset--duotone--grayscale: url('https://www.dnbbn.com/');
+            --wp--preset--duotone--purple-yellow: url('https://www.dnbbn.com/');
+            --wp--preset--duotone--blue-red: url('https://www.dnbbn.com/');
+            --wp--preset--duotone--midnight: url('https://www.dnbbn.com/');
+            --wp--preset--duotone--magenta-yellow: url('https://www.dnbbn.com/');
+            --wp--preset--duotone--purple-green: url('https://www.dnbbn.com/');
+            --wp--preset--duotone--blue-orange: url('https://www.dnbbn.com/');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+    </style>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}"/>
+    <link rel='stylesheet' id='flat-theme-css' href="{% static 'wp-content/themes/flat/assets/css/flat.min.css' %}" media='all'>
+    <link rel='stylesheet' id='flat-style-css' href="{% static 'wp-content/themes/flat/style.css' %}" media='all'>
+    <link rel='stylesheet' id='fancybox-css' href="{% static 'wp-content/plugins/easy-fancybox/css/jquery.fancybox.min.css' %}" media='screen'>
+    <script src="{% static 'wp-includes/js/jquery/jquery.min.js' id='jquery-core-js' %}"></script>
+    <script src="{% static 'wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js' %}"></script>
+    <script src="{% static 'wp-content/themes/flat/assets/js/flat.min.js' id='flat-js-js' %}"></script>
+    <style type="text/css"></style>
+    <style type="text/css">
+        #masthead .site-title {
+            font-family: Amatic SC
+        }
+
+        body {
+            font-family: Roboto
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Roboto Slab
+        }
+
+        #masthead .site-description,
+        .hentry .entry-meta {
+            font-family: Roboto Condensed
+        }
+    </style>
+    <style type="text/css" id="custom-background-css">
+        body.custom-background {
+            background-image: url("{% static 'wp-content/uploads/2022/05/DH1Q5NM3U2FXDC@7T.png' %}");
+            background-position: left top;
+            background-size: auto;
+            background-repeat: repeat;
+            background-attachment: scroll;
+        }
+    </style>
+    <style type="text/css" id="wp-custom-css">
+        #masthead .site-description {
+            font-size: 24px;
+            text-transform: lowercase;
+            color: chartreuse;
+        }
+
+
+        #site-navigation a {
+            text-transform: capitalize
+        }
+
+        pre {
+
+            white-space: pre-wrap
+        }
+
+        #masthead .site-title,
+        .hentry .entry-title {
+            font-size: 38px;
+        }
+    </style>
+</head>
+
+<body class="home page-template-default page page-id-559 custom-background single single-post postid-434 single-format-standard" itemscope="" itemtype="http://schema.org/WebPage">
+
+    <div id="page">
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div id="secondary" class="col-lg-3">
+                    <header id="masthead" class="site-header" role="banner">
+                        <div class="hgroup">
+                            <h1 class="site-title display-title"><a href="" title="达牛帮帮你" rel="home"><span itemprop="name">达牛帮帮你</span></a></h1>
+                            <h2 itemprop="description" class="site-description">www.dnbbn.com</h2>
+                        </div>
+                        <button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><i class="fa fa-gear"></i></button>
+                        <button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><i class="fa fa-bars"></i></button>
+                        <nav id="site-navigation" class="navigation main-navigation" role="navigation">
+                            <ul id="menu-%e5%8a%9e%e5%85%ac%e5%88%97%e8%a1%a8" class="nav-menu">
+                                <li id="menu-item-566" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-566"><a href="/" aria-current="page">首页</a></li>
+                                <!--首页左侧列表-->
+                                <li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9"><a href="">{{ categorys.2 }}</a>
+                                    <ul class="sub-menu">
+                                    {% for Microsoft_Office_category in Microsoft_Office_categorys %}
+                                            <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1011"><a href="/info/{{ Microsoft_Office_category.id }}.html">————{{ Microsoft_Office_category.title }}</a></li>
+                                    {% endfor %}
+
+                                    </ul>
+                                </li>
+                                <li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9"><a href="">{{ categorys.3 }}</a>
+                                    <ul class="sub-menu">
+                                    {% for Windows_category in Windows_categorys %}
+                                            <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1011"><a href="/info/{{ Windows_category.id }}.html">————{{ Windows_category.title }}</a></li>
+                                    {% endfor %}
+                                    </ul>
+                                </li>
+                                <li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9"><a href="">{{ categorys.0 }}</a>
+                                    <ul class="sub-menu">
+                                    {% for Adobe_category in Adobe_categorys %}
+                                            <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1011"><a href="/info/{{ Adobe_category.id }}.html">————{{ Adobe_category.title }}</a></li>
+                                    {% endfor %}
+                                    </ul>
+                                </li>
+                                <li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9"><a href="">{{ categorys.1 }}</a>
+                                    <ul class="sub-menu">
+                                    {% for CAD_category in CAD_categorys %}
+                                            <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1011"><a href="/info/{{ CAD_category.id }}.html">————{{ CAD_category.title }}</a></li>
+                                    {% endfor %}
+                                    </ul>
+                                </li>
+
+                                <li id="menu-item-564" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-564"><a href="/info_new/page=15.html">思维脑图</a></li>
+                                <li id="menu-item-565" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-565"><a href="/other.html">其他整理</a></li>
+                                <li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567"><a href="/info_new/page=14.html">常用工具中心</a></li>
+                                <li id="menu-item-568" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-568"><a href="/info/xinde.html">心得杂坛</a></li>
+
+                            </ul>
+                        </nav>
+                    </header>
+                    <div class="sidebar-offcanvas">
+                        <div id="main-sidebar" class="widget-area" role="complementary">
+                            <aside id="text-3" class="widget widget_text">
+                                <h3 class='widget-title'>一起进步</h3>
+                                <div class="textwidget">
+                                    <h3 class="widget-title"></h3>
+                                    <div class="textwidget">
+                                        <p><a href="/ncnkefu.html"  rel="noopener"><img loading="lazy" class="" src="{% static 'imgqq/onlinekefu.png' %}" width="17" height="26"><strong>邮件反馈</strong></a></p>
+                                        <p>Email: l2214888601.163.com<br>
+                                            <a href="https://www.dnbbn.com/post-sitemap.xml">.</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧页面div开始 -->
+
+                    {% block content %}{% endblock %}
+
+                <!-- 右侧页面div结束 -->
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'wp-content/plugins/easy-fancybox/js/jquery.fancybox.min.js' %}" id='jquery-fancybox-js'></script>
+    <script id='jquery-fancybox-js-after'>
+        var fb_timeout, fb_opts = {
+            'overlayShow': true,
+            'hideOnOverlayClick': true,
+            'showCloseButton': true,
+            'margin': 20,
+            'centerOnScroll': false,
+            'enableEscapeButton': true,
+            'autoScale': true
+        };
+        if (typeof easy_fancybox_handler === 'undefined') {
+            var easy_fancybox_handler = function() {
+                jQuery('.nofancybox,a.wp-block-file__button,a.pin-it-button,a[href*="pinterest.com/pin/create"],a[href*="facebook.com/share"],a[href*="twitter.com/share"]').addClass('nolightbox');
+                /* IMG */
+                var fb_IMG_select = 'a[href*=".jpg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpg"]:not(.nolightbox),a[href*=".jpeg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpeg"]:not(.nolightbox),a[href*=".png"]:not(.nolightbox,li.nolightbox>a),area[href*=".png"]:not(.nolightbox),a[href*=".webp"]:not(.nolightbox,li.nolightbox>a),area[href*=".webp"]:not(.nolightbox)';
+                jQuery(fb_IMG_select).addClass('fancybox image');
+                var fb_IMG_sections = jQuery('.gallery,.wp-block-gallery,.tiled-gallery,.wp-block-jetpack-tiled-gallery');
+                fb_IMG_sections.each(function() {
+                    jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this));
+                });
+                jQuery('a.fancybox,area.fancybox,li.fancybox a').each(function() {
+                    jQuery(this).fancybox(jQuery.extend({}, fb_opts, {
+                        'transitionIn': 'elastic',
+                        'easingIn': 'easeOutBack',
+                        'transitionOut': 'elastic',
+                        'easingOut': 'easeInBack',
+                        'opacity': false,
+                        'hideOnContentClick': false,
+                        'titleShow': true,
+                        'titlePosition': 'over',
+                        'titleFromAlt': true,
+                        'showNavArrows': true,
+                        'enableKeyboardNav': true,
+                        'cyclic': false
+                    }))
+                });
+            };
+            jQuery('a.fancybox-close').on('click', function(e) {
+                e.preventDefault();
+                jQuery.fancybox.close()
+            });
+        };
+        var easy_fancybox_auto = function() {
+            setTimeout(function() {
+                jQuery('#fancybox-auto').trigger('click')
+            }, 1000);
+        };
+        jQuery(easy_fancybox_handler);
+        jQuery(document).on('post-load', easy_fancybox_handler);
+        jQuery(easy_fancybox_auto);
+    </script>
+    <script src="{% static 'wp-content/plugins/easy-fancybox/js/jquery.easing.min.js' %}" id='jquery-easing-js'></script>
+    <script src="{% static 'wp-content/plugins/easy-fancybox/js/jquery.mousewheel.min.js' %}" id='jquery-mousewheel-js'></script>
+
+    <div id="left_layer" style="position:fixed; top:150px; right:0px;z-index:999;">
+        <span style="display: block;float: right; font-size: 12px;cursor:default ; " onclick="javascript:document.getElementById('left_layer').style.display='none';">关闭</span>
+        <a  href="/ncnkefu.html" style="display: block;text-decoration: none;font-size: 14px;color: darkblue;text-align: center;font-weight:bold ;">
+            <img src="{% static 'imgqq/onlinekefu.png' %}" width="50"><br>
+              <span  style="color:#0e1cc5;font-size:14px;">邮件反馈<br>
+            </span ></a>
+    </div>
+
+    <script>
+        if (window.screen.availHeight > 700) {
+            document.getElementById("left_layer").style.marginRight = "10%";
+            console.log(window.screen.availHeight);
+        }
+    </script>
+
+<!--    版权信息-->
+    <div class="foot-copyright">
+        <p class="foot-box">Copyright © 2013-2021 WWW.xx.COM. All Rights Reserved. xxx 版权所有　济南市xx科技有限公司　<a target="_blank" href="http://beian.miit.gov.cn">鲁ICP备xx号</a></p>
+    </div>
+    <style type="text/css">
+        .foot-copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding:0 30px;
+            color: #7a7d80;
+            overflow: hidden;
+            background: #292e33;
+            max-width:1200px;
+            margin: 0 auto;
+            min-height: 50px;
+        }
+        .foot-copyright .foot-box{
+            text-align: center;
+            margin: 1% auto;
+            max-width:1200px;
+            /*background: #292e33;*/
+        }
+    </style>
+<!--    版权信息-->
+</body>
+</html>

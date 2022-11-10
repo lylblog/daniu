@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+	{% autoescape off %}        <!-- 去掉富文本标签-开始 -->
+	<h1 class="page-title">分类： <span>心得杂坛</span></h1>
+	{% for Xindezatan_category in Xindezatan_categorys %}
+	<div id="content" class="site-content" role="main">
+		<article itemscope="" itemtype="http://schema.org/Article" id="post-126" class="post-126 post type-post status-publish format-standard hentry category-xinde">
+			<header class="entry-header">
+				<h2 class="entry-title" itemprop="name">
+					<a itemprop="url" href="/info/{{ Xindezatan_category.id }}.html" title="{{ Xindezatan_category.title }}" rel="bookmark">{{ Xindezatan_category.title }}</a>
+				</h2>
+				<div class="entry-meta"><span class="entry-date">
+					<a href="/info/{{ Xindezatan_category.id }}.html" rel="bookmark"><time class="entry-date published" datetime="{{ Xindezatan_category.created_time }}" itemprop="datepublished">{{ Xindezatan_category.created_time }}</time></a></span> by <span class="author vcard" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+					<a class="url fn n" href="/info/{{ Xindezatan_category.id }}.html" rel="author" itemprop="url"><span itemprop="name">{{ Xindezatan_category.id }}</span></a></span><span class="sep">·</span><span class="comments-link">
+					<a href="/info/{{ Xindezatan_category.id }}.html" itemprop="discussionUrl">23条评论</a></span>
+				</div>
+			</header>
+			<div class="entry-content" itemprop="articleBody">
+				<p>{{ Xindezatan_category.description }}</p>
+				<a class="btn btn-default btn-sm" href="/info/{{ Xindezatan_category.id }}.html">继续阅读<i class="fa fa-angle-double-right"></i></a>
+			</div>
+		</article>
+	</div>
+	<hr>
+
+	{% endfor %}
+	{% endautoescape %}        <!-- 去掉富文本标签-结束 -->
+</div>
+{% endblock %}

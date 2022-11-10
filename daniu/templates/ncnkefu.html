@@ -1,0 +1,53 @@
+<!-- 导入模版页 -->
+{% extends 'base.html' %}
+<!-- 导入静态资源 -->
+{% load static %}
+<!-- xxx -->
+{% block content %}
+<style>
+.ncnkefu {
+    margin: 5% auto;
+    width: 60%;
+}
+</style>
+<div id="respond" class="ncnkefu">
+    <p class="ncnkefu">
+        <h3>{{ mail_status }}</h3>
+    </p>
+   <form   id="comment_form"
+			class="comment-form"
+			novalidate=""
+           action="/ncnkefu_res.html"
+           method="post">
+           {% csrf_token %}
+          <!-- Unnamed (文本框(邮件主题)) -->
+          <p class="comment-form-author"><label for="author">邮件主题 <span class="required" aria-hidden="true">*</span></label>
+            <br>
+			<input type="email" id="id_name" name="subject"
+                   placeholder="请输入邮件主题" />
+                   <!--value="{{ user.username }}" />-->
+          </p>
+          <!-- Unnamed (文本框(邮件正文)) -->
+         <p class="comment-form-comment"><label for="comment">邮件正文 <span class="required" aria-hidden="true">*</span></label>
+           <br>
+           <textarea id="id_comment" name="message" rows="8" cols="45" maxlength="65525" required="" placeholder="请输入邮件正文"></textarea>
+           <br>
+           <label for="comment"><span class="required" aria-hidden="true">*注：</span>邮件主题/正文中务必注明联系电话或邮箱</label>
+         </p>
+
+<!--       &lt;!&ndash; Unnamed (文本框(邮件地址)) &ndash;&gt;-->
+<!--        <p class="comment-form-email"><label for="email">发件人邮箱地址 <span class="required" aria-hidden="true">*</span></label>-->
+<!--          <br>-->
+<!--			<input type="email"-->
+<!--                   id="id_email"-->
+<!--                   name="from_email"-->
+<!--                   placeholder="请输入您的邮箱地址"-->
+<!--                   value="{{ user.email }}" />-->
+<!--        </p>-->
+       <!-- Unnamed (HTML按钮) -->
+       <p class="form-submit">
+			<input  id="u1_input" type="submit" id="submit" class="submit" value="发送邮件">
+       </p>
+   </form>
+</div>
+{% endblock %}

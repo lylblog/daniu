@@ -1,0 +1,50 @@
+from django.contrib import admin
+from .models import Article, User, Category, Tag, ArticleComment
+from django_summernote.admin import SummernoteModelAdmin
+
+# Register your models here.
+# 定义后台管理类
+class PostAdmin(SummernoteModelAdmin):
+    # 给content字段添加富文本
+    summernote_fields = ('content')
+    # 定义显示字段
+    list_display = [
+        'id',
+        'article_id',
+        'title',
+        'created_time'
+    ]
+    # 定义点击进入字段
+    list_display_links = [
+        'title',
+    ]
+    # 定义每页显示数据条数
+    list_per_page = 10
+    # 搜索框
+    search_fields = [
+        'title'
+    ]
+    # 过滤器
+    list_filter = [
+        'created_time'
+    ]
+
+# class ArticleAdmin(admin.ModelAdmin):
+class CommentAdmin(admin.ModelAdmin):
+    # 定义显示字段
+    list_display = [
+        'username',
+        'body',
+        'title'
+    ]
+    # 搜索框
+    search_fields = [
+        'title'
+    ]
+
+
+admin.site.register(Article, PostAdmin)
+admin.site.register(Category)
+admin.site.register(Tag)
+admin.site.register(User)
+admin.site.register(ArticleComment, CommentAdmin)
