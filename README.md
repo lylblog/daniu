@@ -2,8 +2,8 @@
 
 #### 介绍
 - Django Web博客项目
--- daniu--Django_web主项目
--- daniu_wechat--微信小程序
+- -daniu--Django_web主项目
+- -daniu_wechat--微信小程序
 
 #### 软件架构
 - Python 3.10
