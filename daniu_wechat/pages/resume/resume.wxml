@@ -1,0 +1,28 @@
+<!--resume.wxml-->
+<view class="container">
+  <view class='resume_header'>
+  <view class="userinfo">
+  <view class='userinfo-avatar'>
+    <open-data mode='aspectFit' type="userAvatarUrl"></open-data>
+</view>
+ <open-data class="text" type="userNickName"></open-data>
+  <view class="name-qm">点滴记忆</view>
+        <button class="xx-dr" openType="getUserInfo">遇上更好的你</button>
+ </view>
+  </view>
+   <view class="music-w">
+            <view class="music-t">
+                <image class="fr-img" src="./images/bei.jpg"></image>
+            </view>
+            <view class="pl"> {{ setting.bloginfo }}
+             本博客博文均为博主个人见解，难免有不足之处，希望各位能够指出，我们一起交流进步。
+            </view>
+            <view class="crea">博客介绍</view>
+        </view>
+        <view class="four-button">
+<button class="button-color"  open-type="openGroupProfile" group-id="496787695">加群</button>
+<button class="button-color"  bindtap='2'>壁纸</button>
+<button class="button-color"  open-type="share" share-type="{{32}}">分享</button>
+<button class="button-color"  bindtap='1'>表情</button>
+</view>
+</view>

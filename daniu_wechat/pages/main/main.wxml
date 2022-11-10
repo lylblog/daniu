@@ -1,0 +1,10 @@
+<button type='primary' bindtap='downString'>download</button>
+<button type='warn' bindtap='clientTest'>download</button>
+<view>
+  {{wxNews}}
+</view>
+
+<view>
+  <text>{{adList[0].fields.contents}}</text>
+
+</view>
