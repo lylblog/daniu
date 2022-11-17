@@ -1,12 +1,12 @@
-import { BOOKS, LABEL } from "../../books.js";
 Page({
   data: {
     adList:'',
-    // label: LABEL,
-    // label: '',
     bookData: null
   },
-
+  onLoad: function (options) {
+    pk = console.log(options.bid)    //options.参数名就可以取到
+    print(pk)
+  },
   onLoad(option) {
     this.setData({
       bookData: adList[option.id - 1]
@@ -16,7 +16,7 @@ Page({
   clientTest:function(){
     var that = this
     wx.request({
-      url: 'http://127.0.0.1:65530/wx_jiekou',
+      url: 'http://127.0.0.1:65530/api/articles',
       dataType:'json',
       method:'get',
       success:function(res){

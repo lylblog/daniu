@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',    # api
     'daniuapp',  # app1
     'wx_jiekou',  # app2
     'django.contrib.sites',  # 评论

@@ -30,7 +30,7 @@ Page({
     // console.log(e.currentTarget.dataset.bid)
     const bid = e.currentTarget.dataset.bid
     wx.navigateTo({
-      url: `../main/main`,
+      url: `../detail/detail?id=${bid}`,
     })
   },
   goSortLogs: function (event) {
@@ -45,7 +45,7 @@ Page({
   clientTest:function(){
     var that = this
     wx.request({
-      url: 'http://127.0.0.1:65530/api/article',
+      url: 'http://127.0.0.1:65530/api/articles',
       dataType:'json',
       method:'get',
       success:function(res){

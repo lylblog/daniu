@@ -27,5 +27,5 @@ urlpatterns = [
     # 评论
     path(r'comments/', include('django_comments.urls')),
 
-    re_path('api', include("wx_jiekou.urls"))
+    re_path('api/', include("wx_jiekou.urls"))
 ]

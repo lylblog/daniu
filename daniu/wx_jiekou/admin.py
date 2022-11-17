@@ -1,9 +1,12 @@
 from django.contrib import admin
-from .models import test
+
+from .models import Student
+
+
 # Register your models here.
-class testlist(admin.ModelAdmin):
-    list_display = ['pk', 'titles']
-    list_filter = ['titles']
-    search_fields = ['titles']
+class Studentlist(admin.ModelAdmin):
+    list_display = ['id', 'name']
+    list_filter = ['name']
+    search_fields = ['name']
     list_per_page = 6
-admin.site.register(test,testlist)
+admin.site.register(Student,Studentlist)
