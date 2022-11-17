@@ -18,7 +18,9 @@ class CategorySerializer(serializers.ModelSerializer):
         # 指定序列化器对应的模型
         model = Category
         # 指定需要序列化的字段，‘__all__’表示所有字段
-        fields = ['name']
+        # fields = ['name']
+        fields = '__all__'
+
 ####文章分类序列化####
 #
 # class GradeSerializer(serializers.ModelSerializer):

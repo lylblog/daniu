@@ -1,32 +1,32 @@
-<view wx:if="{{bookData}}">
+<view wx:if="{{adList}}">
   <view class="cover-container">
     <image src="http://png.hkiii.cn/blog/1.png"></image>
   </view>
 
   <view class="book-meta">
     <view class="meta-info">
-      <text class="book-title">{{adList.fields.title}}</text>
-      <text class="other-meta">{{label.author}}: <block wx:for="{{adList.author}}" wx:for-item="it" wx:key="*this">{{it}} </block></text>
-      <text class="other-meta">{{label.publisher}}: {{bookData.publisher}}</text>
-      <text class="other-meta">{{label.pubdate}}: {{bookData.pubdate}}</text>
+      <text class="book-title">{{adList.title}}</text>
+      <text class="other-meta">{{adList.title}}: <block wx:for="{{adList.article_id}}" wx:for-item="it" wx:key="*this">{{it}} </block></text>
+      <text class="other-meta">{{adList.title}}: {{adList.article_id}}</text>
+      <text class="other-meta">{{adList.title}}: {{adList.article_id}}</text>
     </view>
     <view class="range">
-      <text class="score">{{bookData.rating.average}}</text>
-      <text class="viewers">{{bookData.rating.numRaters ? bookData.rating.numRaters : 0}}{{label.numRaters}}</text>
+      <text class="score">{{adList.category}}</text>
+      <text class="viewers">{{adList.article_id ? adList.category : 0}}{{adList.article_id}}</text>
     </view>
   </view>
 
-  <view class="book-intro" wx:if="{{bookData.summary}}">
+  <view class="book-intro" wx:if="{{adList}}">
     <view class="intro-header">
-      <text>{{label.intro}}</text>
+      <text>{{adList.description}}</text>
     </view>
-    <text class="intro-content">{{bookData.summary}}</text>
+    <text class="intro-content">{{adList.content}}</text>
   </view>
 
-  <view class="book-intro" wx:if="{{bookData.author_intro}}">
+  <view class="book-intro" wx:if="{{adList}}">
     <view class="intro-header">
-      <text>{{label.author}}</text>
+      <text>{{adList.description}}</text>
     </view>
-    <text class="intro-content">{{bookData.author_intro}}</text>
+    <text class="intro-content">{{adList.content}}</text>
   </view>
 </view>

@@ -3,24 +3,24 @@ Page({
     adList:'',
     bookData: null
   },
-  onLoad: function (options) {
-    pk = console.log(options.bid)    //options.参数名就可以取到
-    print(pk)
-  },
-  onLoad(option) {
-    this.setData({
-      bookData: adList[option.id - 1]
-    })
-  },
+  // onLoad(option) {
+  //   this.setData({
+  //     bookData: adList[option.id - 1]
+  //   })
+  // },
 
   clientTest:function(){
     var that = this
+    var id = that.options.id
+    // console.log(id)   // 打印调试
     wx.request({
-      url: 'http://127.0.0.1:65530/api/articles',
+      // url: 'http://localhost:65530/api/article/'+id+'/',
+      url: 'http://localhost:65530/api/article/23/',
+
+      data: {  'format': 'json' },
       dataType:'json',
       method:'get',
       success:function(res){
-        console.log(res.data)
         that.setData({
           adList:res.data
         })
@@ -34,6 +34,7 @@ Page({
   onLoad(options) {
     this.clientTest()
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

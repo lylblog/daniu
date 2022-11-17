@@ -3,6 +3,7 @@ from os import path
 from django.urls import include, re_path
 from rest_framework.routers import DefaultRouter
 from . import views
+from .views import ArticleView
 
 router = DefaultRouter()
 # router.register('student', views.StudentView)
@@ -11,6 +12,10 @@ router = DefaultRouter()
 router.register('category', views.CategoryView)
 router.register('article', views.ArticleView)
 
+
+
+
+
 urlpatterns = [
-    re_path('', include(router.urls))
+    re_path('', include(router.urls)),
 ]

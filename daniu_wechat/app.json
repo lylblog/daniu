@@ -1,13 +1,11 @@
 {
   "pages": [
+    "pages/detail/detail",
 
     "pages/index/index",
-    "pages/detail/detail",
     "pages/sorts/sorts",
-    "pages/main/main",
-    "pages/logs/logs",
-    "pages/home/home",
-    "pages/resume/resume"
+    "pages/resume/resume",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "dark",

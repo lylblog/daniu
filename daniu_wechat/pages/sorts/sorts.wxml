@@ -55,10 +55,10 @@ var delHtmlTag = function(str) {
 -->
 
 <view class="twoImg">
-  <view wx:for="{{adList}}" wx:key="pk" class="item">
+  <view wx:for="{{adList}}" wx:key="id" class="item">
     <view>
-    <image data-bid="{{item.pk}}" bindtap='jumpTo' src="./images/you.png" mode='widthFix' class="item-two-img"></image>
-	  <text class="item-two-text">{{item.fields.name}}</text>
+    <image data-bid="{{item.id}}" bindtap='jumpTo' src="./images/you.png" mode='widthFix' class="item-two-img"></image>
+	  <text class="item-two-text">{{item.name}}</text>
     </view>
   </view>
 </view>

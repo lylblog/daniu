@@ -45,7 +45,7 @@ Page({
   clientTest:function(){
     var that = this
     wx.request({
-      url: 'http://127.0.0.1:65530/api/categorys',
+      url: 'http://127.0.0.1:65530/api/category',
       dataType:'json',
       method:'get',
       success:function(res){

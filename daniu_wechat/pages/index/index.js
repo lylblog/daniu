@@ -1,10 +1,7 @@
 
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-
+  /** 页面的初始数据 **/
 	data:{
     adList:'',
     page: 0,
@@ -45,11 +42,10 @@ Page({
   clientTest:function(){
     var that = this
     wx.request({
-      url: 'http://127.0.0.1:65530/api/articles',
+      url: 'http://localhost:65530/api/article/',
       dataType:'json',
       method:'get',
       success:function(res){
-        console.log(res.data)
         that.setData({
           adList:res.data
         })

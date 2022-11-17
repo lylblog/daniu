@@ -50,17 +50,17 @@ var delHtmlTag = function(str) {
 </view> -->
 <scroll-view scroll-y="true" style="height:{{scrollHeight}}px">
   <view class="list">
-    <block wx:for="{{adList}}" wx:key="pk">
-      <view class="list-item" data-bid="{{item.pk}}" bindtap="toDetailPage">
+    <block wx:for="{{adList}}" wx:key="id">
+      <view class="list-item" data-bid="{{item.id}}" bindtap="toDetailPage">
         <view class="cover">
           <image class="cover-img" src="./images/1.png"></image>
         </view>
         <view class="content">
-          <text class="title">{{item.fields.title}}</text>
-          <text class="desc">{{item.fields.category == '0.0' ? 'None' : item.fields.article_id}}/
-            <block wx:for="{{item.author}}" wx:for-item="it" wx:key="*this">{{it}}/</block>
+          <text class="title">{{item.title}}</text>
+          <text class="desc">{{item.created_time == '0.0' ? 'None' : item.created_time}}/
+            <block wx:for="{{item.status}}" wx:for-item="it" wx:key="*this">{{it}}/</block>
           </text>
-          <text class="pubdate">{{item.fields.created_time}}</text>
+          <text class="pubdate">{{item.tags}}</text>
         </view>
       </view>
     </block>
