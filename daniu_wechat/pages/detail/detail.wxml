@@ -20,13 +20,14 @@
     <view class="intro-header">
       <text>{{adList.description}}</text>
     </view>
-    <text class="intro-content">{{adList.content}}</text>
+    <!-- <text class="intro-content">{{adList.content}}</text> -->
+    <Parser class="intro-content" html="{{adList.content}}" />
   </view>
 
   <view class="book-intro" wx:if="{{adList}}">
     <view class="intro-header">
       <text>{{adList.description}}</text>
     </view>
-    <text class="intro-content">{{adList.content}}</text>
+    <Parser class="intro-content" html="{{adList.content}}" />
   </view>
 </view>

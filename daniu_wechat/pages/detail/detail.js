@@ -1,28 +1,25 @@
+// http://www.manongjc.com/detail/51-fgnqcbzgleqgbfs.html   富文本解析插件
 Page({
   data: {
     adList:'',
-    bookData: null
+    bookData: '',
   },
-  // onLoad(option) {
-  //   this.setData({
-  //     bookData: adList[option.id - 1]
-  //   })
-  // },
+
 
   clientTest:function(){
     var that = this
     var id = that.options.id
     // console.log(id)   // 打印调试
     wx.request({
-      // url: 'http://localhost:65530/api/article/'+id+'/',
-      url: 'http://localhost:65530/api/article/23/',
-
+      url: 'http://localhost:65530/api/article/'+id+'/',
       data: {  'format': 'json' },
       dataType:'json',
       method:'get',
       success:function(res){
+        // console.log(res.data.content)   // 打印调试
         that.setData({
-          adList:res.data
+          adList:res.data,
+          // bookData:res.data.content
         })
       }
     })
