@@ -1,8 +1,10 @@
 // http://www.manongjc.com/detail/51-fgnqcbzgleqgbfs.html   富文本解析插件
+import { LABEL } from "../../base.js";
 Page({
   data: {
     adList:'',
     bookData: '',
+    label: LABEL
   },
 
 

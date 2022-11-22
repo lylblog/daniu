@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-^f2=dd&)8!_eg7*frn5sl)mv_0i#gy*4uj=t)6r#r*8lhp6n((
 DEBUG = True
 # DEBUG = False
 
+# ALLOWED_HOSTS = ['aws.liuhu.asia','13.114.249.162','172.31.4.130','localhost','0.0.0.0:8000','127.0.0.1']
 ALLOWED_HOSTS = ['*']  #允许所有人访问
 CSRF_TRUSTED_ORIGINS = ['https://23165e1b11.zicp.fun']  #允许评论，解决评论“CSRF40”3错误
 

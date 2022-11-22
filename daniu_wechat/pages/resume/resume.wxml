@@ -20,9 +20,9 @@
             <view class="crea">博客介绍</view>
         </view>
         <view class="four-button">
-<button class="button-color"  open-type="openGroupProfile" group-id="496787695">加群</button>
+<!-- <button class="button-color"  open-type="openGroupProfile" group-id="496787695">加群</button>
 <button class="button-color"  bindtap='2'>壁纸</button>
 <button class="button-color"  open-type="share" share-type="{{32}}">分享</button>
-<button class="button-color"  bindtap='1'>表情</button>
+<button class="button-color"  bindtap='1'>表情</button> -->
 </view>
 </view>

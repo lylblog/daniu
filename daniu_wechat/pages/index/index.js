@@ -1,9 +1,10 @@
-
+import { LABEL } from "../../base.js";
 Page({
 
   /** 页面的初始数据 **/
 	data:{
     adList:'',
+    label: LABEL,
     page: 0,
     imgUrls: [
       'http://png.hkiii.cn/blog/1.png',

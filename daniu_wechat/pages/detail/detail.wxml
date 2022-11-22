@@ -6,27 +6,28 @@
   <view class="book-meta">
     <view class="meta-info">
       <text class="book-title">{{adList.title}}</text>
-      <text class="other-meta">{{adList.title}}: <block wx:for="{{adList.article_id}}" wx:for-item="it" wx:key="*this">{{it}} </block></text>
-      <text class="other-meta">{{adList.title}}: {{adList.article_id}}</text>
-      <text class="other-meta">{{adList.title}}: {{adList.article_id}}</text>
+      <text class="other-meta">{{label.author}}: <block wx:for="{{label.user}}" wx:for-item="it" wx:key="*this">{{it}} </block></text>
+      <text class="other-meta">{{label.publisher}}: {{adList.category}}</text>
+      <text class="other-meta">{{label.pubdate}}: {{adList.created_time}}</text>
     </view>
     <view class="range">
       <text class="score">{{adList.category}}</text>
-      <text class="viewers">{{adList.article_id ? adList.category : 0}}{{adList.article_id}}</text>
+      <!-- <text class="viewers">{{label.numRaters ? label.numRaters : 0}}{{label.numRaters}}</text> -->
+      <text class="viewers">{{label.numRaters}}</text>
     </view>
   </view>
-
-  <view class="book-intro" wx:if="{{adList}}">
+<!-- 简介 -->
+  <!-- <view class="book-intro" wx:if="{{adList}}">
     <view class="intro-header">
-      <text>{{adList.description}}</text>
+      <text>{{label.intro}}</text>
     </view>
-    <!-- <text class="intro-content">{{adList.content}}</text> -->
+    <text class="intro-content">{{adList.content}}</text>
     <Parser class="intro-content" html="{{adList.content}}" />
-  </view>
-
+  </view> -->
+<!-- 正文 -->
   <view class="book-intro" wx:if="{{adList}}">
     <view class="intro-header">
-      <text>{{adList.description}}</text>
+      <text>{{label.text}}</text>
     </view>
     <Parser class="intro-content" html="{{adList.content}}" />
   </view>

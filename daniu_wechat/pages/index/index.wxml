@@ -57,10 +57,12 @@ var delHtmlTag = function(str) {
         </view>
         <view class="content">
           <text class="title">{{item.title}}</text>
-          <text class="desc">{{item.created_time == '0.0' ? 'None' : item.created_time}}/
-            <block wx:for="{{item.status}}" wx:for-item="it" wx:key="*this">{{it}}/</block>
+          <text class="desc">{{label.author}}: <block wx:for="{{label.user}}" wx:for-item="it" wx:key="*this">{{it}} </block></text>
+          <text class="pubdate">{{label.publisher}}: {{item.category}}</text>
+          <!-- <text class="desc">{{label.author == '0.0' ? 'None' : label.author}}/
+            <block wx:for="{{label.user}}" wx:for-item="it" wx:key="*this">{{it}}/</block>
           </text>
-          <text class="pubdate">{{item.tags}}</text>
+          <text class="pubdate">{{item.tags}}</text> -->
         </view>
       </view>
     </block>
