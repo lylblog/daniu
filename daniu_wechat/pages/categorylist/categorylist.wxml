@@ -17,7 +17,7 @@ var delHtmlTag = function(str) {
 		      </swiper-item>
 		    </block>
       </swiper>
-<view class="shortWords">
+<!-- <view class="shortWords">
   <swiper class='swiperClas' vertical='ture' autoplay='ture' interval='3000' duration="50" previous-margin="0px" next-margin="0px" circular='ture'>
     <block wx:for="{{wordsData}}" wx:key="{{index}}">
       <swiper-item>
@@ -25,7 +25,7 @@ var delHtmlTag = function(str) {
       </swiper-item>
     </block>
   </swiper>
-</view>
+</view> -->
 <!--
 <view class='search'>
  <input type='text' 
@@ -38,14 +38,14 @@ var delHtmlTag = function(str) {
  </view>
 </view> -->
 
-<view class="fourImg">
-  <image wx:for='{{category}}' wx:key  wx:if="{{index<4}}" data-sid="{{item.id}}" data-sortname="分类目录" bindtap="toCategorylistPage" src="../../static/images/1.png" mode='widthFix' class="desc-head-img">
-  <!-- <text class="item-two-text">{{item.name}}</text> -->
+<!-- <view class="fourImg">
+  <image wx:for='{{category}}' wx:key  wx:if="{{index<4}}" data-sid="{{item.id}}" data-sortname="分类目录" bindtap="toDetailPage" src="./images/1.png" mode='widthFix' class="desc-head-img">
+  <text class="item-two-text">{{item.name}}</text>
   </image>
   
-  <!-- <image data-sid="{{item.id}}" data-sortname="分类目录" bindtap="toDetailPage" src="./images/2.png" mode='widthFix' class="desc-head-img"></image>
-  <text class="item-two-text">{{item.name}}</text>> -->
-</view>
+  <image data-sid="{{item.id}}" data-sortname="分类目录" bindtap="toDetailPage" src="./images/2.png" mode='widthFix' class="desc-head-img"></image>
+  <text class="item-two-text">{{item.name}}</text>>
+</view> -->
 <!-- <view class="twoImg">
   <image data-sid="2" bindtap='newApp' data-index='weather' src="./images/zuo.png" mode='widthFix' class="desc-two-img"></image>
   <image data-sid="2" bindtap='jumpTo' src="./images/you.png" mode='widthFix' class="desc-two-img"></image>

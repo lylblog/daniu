@@ -310,6 +310,7 @@ def ncnkefu_res(request):
         )
         if res == 1:
             mail_status = "邮件发送成功"
+            # return HttpResponseRedirect('/ncnkefu.html')
             return render(request, 'ncnkefu.html', {
             "mail_status": mail_status,
             "categorys": categorys,

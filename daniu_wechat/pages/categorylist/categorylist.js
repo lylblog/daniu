@@ -1,12 +1,11 @@
-
+import { LABEL } from "../../base.js";
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-
+  /** 页面的初始数据 **/
 	data:{
     adList:'',
+    category:'',
+    label: LABEL,
     page: 0,
     img: 'https://api.ixiaowai.cn/api/api.php',
     imgUrls: [
@@ -27,8 +26,16 @@ Page({
     nickname:'',
     excerpt: '',
   },
-  // 全部文章数据
-  clientTest:function(){
+    // 详情页跳转
+  toDetailPage(e) {
+    // console.log(e.currentTarget.dataset.bid)
+    const bid = e.currentTarget.dataset.bid
+    wx.navigateTo({
+      url: `../detail/detail?id=${bid}`,
+    })
+  },
+// 请求分类数据
+  clientCategory:function(){
     var that = this
     wx.request({
       url: 'http://aws.liuhu.asia/api/category',
@@ -37,17 +44,26 @@ Page({
       success:function(res){
         console.log(res.data)
         that.setData({
-          adList:res.data
+          category:res.data,  
         })
       }
     })
-  },
-  // 分类文章列表页跳转
-  toCategorylistPage(e) {
-    // console.log(e.currentTarget.dataset.sid)
-    const sid = e.currentTarget.dataset.sid
-    wx.navigateTo({
-      url: `../categorylist/categorylist?id=${sid}`,
+  }, 
+  // 请求指定分类下文章 
+  clientCategorylist:function(){
+    var that = this
+    var id = that.options.id
+    console.log(id)
+    wx.request({
+      url: 'http://localhost:65530/api/article/'+id+'/vote/',
+      dataType:'json',
+      method:'get',
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          adList:res.data  
+        })
+      }
     })
   },
 
@@ -59,12 +75,15 @@ Page({
       url: '../sorts-log/blog?sid=' + sid + '&sortname=' + sortname
     });
   },
+
+
   
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.clientTest()
+    this.clientCategory()
+    this.clientCategorylist()
   },
 
   /**

@@ -12,7 +12,7 @@
   </view>
    <view class="music-w">
             <view class="music-t">
-                <image class="fr-img" src="./images/bei.jpg"></image>
+                <image class="fr-img" src="../../static/bei.jpg"></image>
             </view>
             <view class="pl"> {{ setting.bloginfo }}
              本博客博文均为博主个人见解，难免有不足之处，希望各位能够指出，我们一起交流进步。

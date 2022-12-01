@@ -1,6 +1,6 @@
 <view wx:if="{{adList}}">
   <view class="cover-container">
-    <image src="http://png.hkiii.cn/blog/1.png"></image>
+    <image src="{{img}}"></image>
   </view>
 
   <view class="book-meta">

@@ -1,8 +1,9 @@
 {
   "pages": [
-     "pages/index/index",
-     "pages/detail/detail",
+    "pages/index/index",
+    "pages/detail/detail",
     "pages/sorts/sorts",
+    "pages/categorylist/categorylist",
     "pages/resume/resume",
     "pages/logs/logs"
   ],
@@ -22,23 +23,24 @@
       {
         "pagePath": "pages/index/index",
         "text": "博客",
-        "iconPath": "static/1/home.png",
-        "selectedIconPath": "static/1/home1.png"
+        "iconPath": "static/images/1/home.png",
+        "selectedIconPath": "static/images/1/home1.png"
       },
       {
         "pagePath": "pages/sorts/sorts",
         "text": "分类",
-        "iconPath": "static/1/love.png",
-        "selectedIconPath": "static/1/love1.png"
+        "iconPath": "static/images/1/love.png",
+        "selectedIconPath": "static/images/1/love1.png"
       },
       {
         "pagePath": "pages/resume/resume",
         "text": "我的",
-        "iconPath": "static/1/user.png",
-        "selectedIconPath": "static/1/user1.png"
+        "iconPath": "static/images/1/user.png",
+        "selectedIconPath": "static/images/1/user1.png"
       }
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
 }

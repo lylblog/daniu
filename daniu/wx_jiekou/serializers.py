@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Grade, Course, Student
+
 from daniuapp.models import Category, Article
 
 

@@ -15,7 +15,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
+from django.template.defaulttags import url
 from django.urls import path, include, re_path
+
 
 urlpatterns = [
     # admin路由
@@ -26,6 +29,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     # 评论
     path(r'comments/', include('django_comments.urls')),
-
-    re_path('api/', include("wx_jiekou.urls"))
+    # API
+    re_path('api/', include("wx_jiekou.urls")),
 ]

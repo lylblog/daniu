@@ -9,11 +9,8 @@ router = DefaultRouter()
 # router.register('student', views.StudentView)
 # router.register('course', views.CourseView)
 # router.register('grade', views.GradeView)
-router.register('category', views.CategoryView)
-router.register('article', views.ArticleView)
-
-
-
+router.register('article', views.ArticleView, basename='article')
+router.register('category', views.CategoryView, basename='category')
 
 
 urlpatterns = [
