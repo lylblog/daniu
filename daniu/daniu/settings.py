@@ -172,6 +172,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / "templates/static",
 ]
+# 上线前收集全部静态资源至templates/static，收集命令：python manage.py collectstatic
+# STATIC_ROOT = os.path.join(BASE_DIR, "templates/static")
 
 # # 定义上传文件路径
 MEDIA_URL = "/templates/data/media/"
