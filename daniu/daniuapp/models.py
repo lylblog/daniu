@@ -15,6 +15,12 @@ class User(models.Model):
     def __str__(self):
         return self.username
 
+    class Meta:
+        ordering = ['username']
+        verbose_name = '用户'  # 指定后台显示模型名称
+        verbose_name_plural = '用户管理'  # 指定后台显示模型复数名称
+        db_table = "daniuapp_user"  # 数据库表名
+
     def comment(self):
         self.comment_num += 1
         self.save(update_fields=['comment_num'])

@@ -3,6 +3,10 @@ from .models import Article, User, Category, Tag, ArticleComment
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
+
+admin.site.site_title = "xxx博客"
+admin.site.site_header = "xxx博客管理系统"
+admin.site.index_title = "xxx博客"
 # 定义后台管理类
 class PostAdmin(SummernoteModelAdmin):
     # 给content字段添加富文本
