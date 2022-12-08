@@ -103,3 +103,77 @@ class Article(models.Model):
         verbose_name_plural = '文章列表'  # 指定后台显示模型复数名称
         db_table = 'article'  # 数据库表名
         get_latest_by = 'created_time'
+
+
+#---------------------------------菜单管理---------------------------------------
+class Menu(models.Model):
+    STATUS_CHOICES = (
+        ('d', '不显示'),
+        ('p', '显示'),
+    )
+    menu_id = models.CharField(verbose_name='ID', max_length=100)
+    title = models.CharField(verbose_name='菜单名', max_length=100)
+    icon = models.CharField(verbose_name='图标字体', max_length=200)
+    # url = models.URLField(verbose_name='链接地址', max_length=200)
+    url = models.CharField(verbose_name='链接地址', max_length=200)
+    sort_id = models.CharField(verbose_name='排序', max_length=100)
+    status = models.CharField(verbose_name='显示', max_length=1, choices=STATUS_CHOICES, default='p')
+
+    # 使对象在后台显示更友好
+    def __str__(self):
+        return self.title
+    class Meta:
+        ordering = ['status']  # 按id降序
+        verbose_name = '菜单'  # 指定后台显示模型名称
+        verbose_name_plural = '菜单管理'  # 指定后台显示模型复数名称
+        db_table = 'menu'  # 数据库表名
+        get_latest_by = 'status'
+
+
+#---------------------------------页面管理---------------------------------------
+class PageManagement(models.Model):
+    STATUS_CHOICES = (
+        ('d', '不显示'),
+        ('p', '显示'),
+    )
+    page_id = models.CharField(verbose_name='ID', max_length=100)
+    alias = models.CharField(verbose_name='别名', max_length=100)
+    title = models.CharField(verbose_name='标题', max_length=100)
+    keyword = models.CharField(verbose_name='关键字', max_length=200)
+    describe = models.CharField(verbose_name='描述', max_length=200)
+    content = models.TextField(verbose_name='正文', blank=True, null=True)
+    created_time = models.DateTimeField(verbose_name='创建时间', default=now)
+    status = models.CharField(verbose_name='显示', max_length=1, choices=STATUS_CHOICES, default='p')
+
+    # 使对象在后台显示更友好
+    def __str__(self):
+        return self.title
+    class Meta:
+        ordering = ['-created_time']  # 按id降序
+        verbose_name = '页面'  # 指定后台显示模型名称
+        verbose_name_plural = '页面管理'  # 指定后台显示模型复数名称
+        db_table = 'page_management'  # 数据库表名
+        get_latest_by = 'created_time'
+
+
+#---------------------------------页面管理---------------------------------------
+class NoticeManagement(models.Model):
+    STATUS_CHOICES = (
+        ('d', '不显示'),
+        ('p', '显示'),
+    )
+    notice_id = models.CharField(verbose_name='ID', max_length=100)
+    title = models.CharField(verbose_name='标题', max_length=100)
+    content = models.TextField(verbose_name='正文', blank=True, null=True)
+    created_time = models.DateTimeField(verbose_name='创建时间', default=now)
+    status = models.CharField(verbose_name='显示', max_length=1, choices=STATUS_CHOICES, default='p')
+
+    # 使对象在后台显示更友好
+    def __str__(self):
+        return self.title
+    class Meta:
+        ordering = ['-created_time']  # 按id降序
+        verbose_name = '公告'  # 指定后台显示模型名称
+        verbose_name_plural = '公告管理'  # 指定后台显示模型复数名称
+        db_table = 'notice_management'  # 数据库表名
+        get_latest_by = 'created_time'
