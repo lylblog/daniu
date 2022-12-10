@@ -288,7 +288,7 @@ def ncnkefu_res(request):
     subject_str = "".join(request.POST.get('subject', ""))
     message_str = "".join(request.POST.get('message', ""))
     if subject_str == "" or message_str == "":
-        mail_status = "主题或正文为空，请正确填写"
+        mail_status = "error 主题或正文为空，请正确填写!"
         return render(request, 'ncnkefu.html', {
             "mail_status": mail_status,
             "categorys": categorys,
@@ -309,7 +309,7 @@ def ncnkefu_res(request):
             fail_silently=False
         )
         if res == 1:
-            mail_status = "邮件发送成功"
+            mail_status = "success 邮件发送成功！"
             # return HttpResponseRedirect('/ncnkefu.html')
             return render(request, 'ncnkefu.html', {
             "mail_status": mail_status,
@@ -320,7 +320,7 @@ def ncnkefu_res(request):
             "CAD_categorys": CAD_categorys,
             "Xindezatan_categorys": Xindezatan_categorys})
         else:
-            mail_status = "邮件发送失败"
+            mail_status = "error 邮件发送失败！"
             return render(request, 'ncnkefu.html', {
             "mail_status": mail_status,
             "categorys": categorys,

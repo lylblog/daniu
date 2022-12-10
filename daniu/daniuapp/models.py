@@ -66,11 +66,19 @@ class Tag(models.Model):
 
 #---------------------------------博客文章分类---------------------------------------
 class Category(models.Model):
-    name = models.CharField(verbose_name='类别名称', max_length=64)
+    # STATUS_CHOICES = (
+    #     ('d', '否'),
+    #     ('p', '是'),
+    # )
+    name = models.CharField(verbose_name='分类名称', max_length=64)
+    # alias = models.CharField(verbose_name='别名', max_length=100)
+    # created_time = models.DateTimeField(verbose_name='创建时间', default=now)
+    # sort_id = models.CharField(verbose_name='排序', max_length=100)
+    # status = models.CharField(verbose_name='显示', max_length=1, choices=STATUS_CHOICES, default='p')
 
     class Meta:
         ordering = ['name']
-        verbose_name = "类别名称"
+        verbose_name = "分类名称"
         verbose_name_plural = '分类列表'
         db_table = "category"  # 数据库表名
 
