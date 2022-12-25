@@ -1,4 +1,4 @@
-
+import { LABEL } from "../../base.js";
 Page({
 
   /**
@@ -7,7 +7,8 @@ Page({
 
 	data:{
     adList:'',
-    page: 0,
+    page: 1,
+    label: LABEL,
     img: 'https://api.ixiaowai.cn/api/api.php',
     imgUrls: [
       'http://png.hkiii.cn/blog/1.png',
@@ -21,6 +22,7 @@ Page({
     previousMargin: '50px', //前边距，可用于露出前一项的一小部分，接受 px 和 rpx 值
     nextMargin: '50px', //后边距，可用于露出后一项的一小部分，接受 px 和 rpx 值
     circular: true, //是否采用衔接滑动
+    swiperHeight: 180,
     currentSwiperIndex: 0, //swiper当前索引,
     wordsData: [],
     backTopValue: false,
@@ -31,7 +33,7 @@ Page({
   clientTest:function(){
     var that = this
     wx.request({
-      url: 'http://aws.liuhu.asia/api/category',
+      url: 'http://localhost:65530/api/category',
       dataType:'json',
       method:'get',
       success:function(res){

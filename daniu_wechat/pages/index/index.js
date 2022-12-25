@@ -20,6 +20,7 @@ Page({
     previousMargin: '50px', //前边距，可用于露出前一项的一小部分，接受 px 和 rpx 值
     nextMargin: '50px', //后边距，可用于露出后一项的一小部分，接受 px 和 rpx 值
     circular: true, //是否采用衔接滑动
+    swiperHeight: 180,
     currentSwiperIndex: 0, //swiper当前索引,
     wordsData: [],
     backTopValue: false,
@@ -30,7 +31,7 @@ Page({
   clientArticle:function(){
     var that = this
     wx.request({
-      url: 'http://aws.liuhu.asia/api/article/',
+      url: 'http://localhost:65530/api/article/',
       dataType:'json',
       method:'get',
       success:function(res){
@@ -52,7 +53,7 @@ Page({
   clientCategory:function(){
     var that = this
     wx.request({
-      url: 'http://aws.liuhu.asia/api/category',
+      url: 'http://localhost:65530/api/category',
       dataType:'json',
       method:'get',
       success:function(res){

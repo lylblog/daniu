@@ -5,6 +5,7 @@ Page({
     adList:'',
     bookData: '',
     label: LABEL,
+    page: 4,
     img: 'https://api.ixiaowai.cn/api/api.php',
   },
 
@@ -14,7 +15,7 @@ Page({
     var id = that.options.id
     // console.log(id)   // 打印调试
     wx.request({
-      url: 'http://aws.liuhu.asia/api/article/'+id+'/',
+      url: 'http://localhost:65530/api/article/'+id+'/',
       data: {  'format': 'json' },
       dataType:'json',
       method:'get',

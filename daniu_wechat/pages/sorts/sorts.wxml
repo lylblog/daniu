@@ -1,3 +1,17 @@
+<!-- 滚动字幕 -->
+<view class="shortWords">
+  <!-- 上下滚动字幕 -->
+  <!-- <swiper class='swiperClas' vertical='ture' autoplay='ture' interval='4000' duration="100" previous-margin="0px" next-margin="0px" circular='ture'> -->
+  <!-- 左右滚动字幕 -->
+  <swiper autoplay='ture' interval="0" duration="3000" previous-margin="10px" next-margin="0px" circular='ture'>
+    <block wx:for="{{label}}" wx:key="index">
+      <swiper-item>
+        <view class="wordSwiper" style="text-align: center;">{{label.Notice}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
 <wxs module="m1">
 var delHtmlTag = function(str) {
     var reg = getRegExp("<[^>]+>", "g");
@@ -9,23 +23,15 @@ var delHtmlTag = function(str) {
 <view class="var">
 </view>
 <view class="container-blog-view">
-    <swiper class='swiperClass' autoplay indicator-dots="{{indicatorDots}}" interval="2000" duration="1000" previous-margin="0px" next-margin="0px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
-		    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper class='swiperClass' autoplay indicator-dots="{{indicatorDots}}" interval="2000" duration="1000" previous-margin="0px" next-margin="0px" circular style='height: {{swiperHeight}}px'>
+		    <block wx:for="{{imgUrls}}" wx:key="index">
 		      <swiper-item>
 		        <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
 		        </image>
 		      </swiper-item>
 		    </block>
-      </swiper>
-<view class="shortWords">
-  <swiper class='swiperClas' vertical='ture' autoplay='ture' interval='3000' duration="50" previous-margin="0px" next-margin="0px" circular='ture'>
-    <block wx:for="{{wordsData}}" wx:key="{{index}}">
-      <swiper-item>
-        <view class="wordSwiper" style="text-align: center;">{{item.content}}</view>
-      </swiper-item>
-    </block>
-  </swiper>
-</view>
+    </swiper>
+
 <!--
 <view class='search'>
  <input type='text' 
@@ -58,7 +64,7 @@ var delHtmlTag = function(str) {
   <view wx:for="{{adList}}" wx:key="id" class="item" data-sid="{{item.id}}" data-sortname="分类目录" bindtap="toCategorylistPage"  mode='widthFix'>
     <view>
     <!-- <image data-bid="{{item.id}}" bindtap='jumpTo' src="./images/you.png" mode='widthFix' class="item-two-img"></image> -->
-    <image data-bid="{{item.id}}" bindtap='jumpTo' src="{{img}}" mode='widthFix' class="item-two-img"></image>
+    <image data-bid="{{item.id}}" src="{{img}}" mode='widthFix' class="item-two-img"></image>
 	  <text class="item-two-text">{{item.name}}</text>
     </view>
   </view>

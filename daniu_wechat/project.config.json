@@ -14,7 +14,7 @@
     "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
     "autoAudits": false,
-    "uglifyFileName": false,
+    "uglifyFileName": true,
     "uploadWithSourceMap": true,
     "enhance": true,
     "useMultiFrameRuntime": true,

@@ -46,6 +46,32 @@ class CommentAdmin(admin.ModelAdmin):
         'title'
     ]
 
+class Category_newAdmin(SummernoteModelAdmin):
+    # 给content字段添加富文本
+    summernote_fields = ('content')
+    # 定义显示字段
+    list_display = [
+        'id',
+        'name',
+        'alias',
+        'created_time',
+        'sort_id',
+        'status'
+    ]
+    # 定义点击进入字段
+    list_display_links = [
+        'name',
+    ]
+    # 定义每页显示数据条数
+    list_per_page = 10
+    # 搜索框
+    search_fields = [
+        'title'
+    ]
+    # 过滤器
+    list_filter = [
+        'status'
+    ]
 class MenuAdmin(SummernoteModelAdmin):
     # 给content字段添加富文本
     summernote_fields = ('content')
@@ -135,7 +161,7 @@ admin.site.register(NoticeManagement, NoticeManagementAdmin)
 admin.site.register(PageManagement, PageManagementAdmin)
 admin.site.register(Menu, MenuAdmin)
 admin.site.register(Article, PostAdmin)
-admin.site.register(Category)
+admin.site.register(Category, Category_newAdmin)
 admin.site.register(Tag)
 admin.site.register(User)
 admin.site.register(ArticleComment, CommentAdmin)

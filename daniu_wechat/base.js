@@ -6,5 +6,6 @@ export const LABEL = {
   text: "正文",
   intro: "简介",
   numRaters: "参与",
-  loading: "加载中"
+  loading: "加载中",
+  Notice: "公告滚动测试"
 }
