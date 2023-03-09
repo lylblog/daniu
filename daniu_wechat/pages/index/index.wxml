@@ -2,7 +2,7 @@
   <!-- 上下滚动字幕 -->
   <!-- <swiper class='swiperClas' vertical='ture' autoplay='ture' interval='4000' duration="100" previous-margin="0px" next-margin="0px" circular='ture'> -->
   <!-- 左右滚动字幕 -->
-  <swiper autoplay='ture' interval="0" duration="10000" previous-margin="10px" next-margin="0px" circular='ture'>
+  <swiper autoplay='ture' interval="0" duration="12000" previous-margin="10px" next-margin="0px" circular='ture'> <!-- bindchange="bindchange" -->
     <block wx:for="{{label}}" wx:key="index">
       <swiper-item>
         <view class="wordSwiper" style="text-align: center;">{{label.Notice}}</view>
@@ -26,8 +26,7 @@ var delHtmlTag = function(str) {
     <swiper class='swiperClass' autoplay indicator-dots="{{indicatorDots}}" interval="2000" duration="1000" previous-margin="0px" next-margin="0px" circular  style='height: {{swiperHeight}}px'>
 		    <block wx:for="{{imgUrls}}" wx:key="index">
 		      <swiper-item>
-		        <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
-		        </image>
+		        <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'></image>
 		      </swiper-item>
 		    </block>
       </swiper>

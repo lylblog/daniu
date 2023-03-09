@@ -18,9 +18,9 @@ def gen_license_file():
     with open(license_file, 'w') as LF:
         # 安装机器的MAC地址
         # LF.write('MAC : 00:15:5D:E2:91:70\n')
-        LF.write('Date : 20221022\n')
+        LF.write('Date : 20231022\n')
         # sign = encrypt('00:15:5D:E2:91:70#20220101')
-        sign = encrypt('20221022')
+        sign = encrypt('20231022')
         LF.write('Sign : ' + str(sign.decode('utf-8')) + '\n')
 
 

@@ -3,7 +3,7 @@
   <!-- 上下滚动字幕 -->
   <!-- <swiper class='swiperClas' vertical='ture' autoplay='ture' interval='4000' duration="100" previous-margin="0px" next-margin="0px" circular='ture'> -->
   <!-- 左右滚动字幕 -->
-  <swiper autoplay='ture' interval="0" duration="3000" previous-margin="10px" next-margin="0px" circular='ture'>
+  <swiper autoplay='ture' interval="0" duration="12000" previous-margin="10px" next-margin="0px" circular='ture'>
     <block wx:for="{{label}}" wx:key="index">
       <swiper-item>
         <view class="wordSwiper" style="text-align: center;">{{label.Notice}}</view>

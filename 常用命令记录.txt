@@ -1,0 +1,84 @@
+直接执行python3 manage.py可列出所有Django子命令
+
+创建项目：django-admin startproject XXX(项目名）
+
+创建应用：python manage.py startapp xxx（应用名）
+
+启动项目命令：python manage.py runserver
+
+python manage.py makemigrations#生成迁移文件
+
+python manage.py migrate#执行迁移文件
+
+D:\daniu\venv\Scripts\python.exe D:\daniu\daniu\manage.py
+
+
+
+
+=================git命令===================
+创建
+git add .
+提交
+git commit -m "xxx"
+推送
+git push gitee master
+
+
+
+所以，创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
+
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/michael/learngit
+pwd命令用于显示当前目录。在我的Mac上，这个仓库位于/Users/michael/learngit。
+
+ 如果你使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。
+第二步，通过git init命令把这个目录变成Git可以管理的仓库：
+
+$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/
+第一步，用命令git add告诉Git，把文件添加到仓库：
+
+$ git add readme.txt
+执行上面的命令，没有任何显示，这就对了，Unix的哲学是“没有消息就是好消息”，说明添加成功。
+为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：
+
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "add 3 files."
+第二步，用命令git commit告诉Git，把文件提交到仓库：
+
+$ git commit -m "wrote a readme file"
+[master (root-commit) eaadf4e] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+
+使用命令git remote add把它和Gitee的远程库关联：
+git remote add origin git@gitee.com:liaoxuefeng/learngit.git
+
+删除已有的GitHub远程库：
+git remote rm origin
+
+再关联Gitee的远程库（注意路径中需要填写正确的用户名）：
+git remote add origin git@gitee.com:liaoxuefeng/learngit.git
+
+此时，我们再查看远程库信息：
+git remote -v
+origin	git@gitee.com:liaoxuefeng/learngit.git (fetch)
+origin	git@gitee.com:liaoxuefeng/learngit.git (push)
+
+=================git命令===================
+
+=================安装完成==================
+
+请用浏览器访问面板:
+外网:http://13.114.249.162:9080/4CC274
+内网:http://172.31.4.130:9080/4CC274
+系统初始账号:admin
+系统初始密码:v-69NK-ch5      !QAZwsx
+官网:https://www.xp.cn
+如果使用的是云服务器，请至安全组开放9080端口
+如果使用ftp，请开放21以及30000-30050端口
+
+===========================================

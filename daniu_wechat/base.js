@@ -7,5 +7,5 @@ export const LABEL = {
   intro: "简介",
   numRaters: "参与",
   loading: "加载中",
-  Notice: "公告滚动测试"
+  Notice: "2023年3月7日-公告"
 }

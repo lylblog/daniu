@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/sorts/sorts",
+    "pages/categorylist/categorylist",
+    "pages/resume/resume",
+    "pages/logs/logs",
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FCF1F8",
+    "navigationBarTitleText": "迎风丨Blog",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7f8389",
+    "selectedColor": "#00a8f3",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "博客",
+        "iconPath": "static/images/1/home.png",
+        "selectedIconPath": "static/images/1/home1.png"
+      },
+      {
+        "pagePath": "pages/sorts/sorts",
+        "text": "分类",
+        "iconPath": "static/images/1/love.png",
+        "selectedIconPath": "static/images/1/love1.png"
+      },
+      {
+        "pagePath": "pages/resume/resume",
+        "text": "我的",
+        "iconPath": "static/images/1/user.png",
+        "selectedIconPath": "static/images/1/user1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

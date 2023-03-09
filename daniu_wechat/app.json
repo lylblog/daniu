@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/index_gzh/index_gzh",
+    "pages/detail_gzh/detail_gzh",
     "pages/index/index",
     "pages/detail/detail",
     "pages/sorts/sorts",
@@ -10,7 +12,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#FCF1F8",
-    "navigationBarTitleText": "首页",
+    "navigationBarTitleText": "迎风丨Blog",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -20,7 +22,7 @@
     "backgroundColor": "#f7f7fa",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index_gzh/index_gzh",
         "text": "博客",
         "iconPath": "static/images/1/home.png",
         "selectedIconPath": "static/images/1/home1.png"
